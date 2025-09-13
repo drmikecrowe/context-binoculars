@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="description" content="Interactive binocular viewer for exploring strategy images">
+    <meta name="author" content="Binocular Viewer">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Mobile-specific meta tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Binocular Viewer">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- GitHub Pages compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Favicon and app icons -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmJpbm9jdWxhci1ib2R5IHsgZmlsbDogIzMzMzsgfQogICAgICAuYmlub2N1bGFyLWxlbnMgeyBmaWxsOiAjODdDRUVCOyBzdHJva2U6ICMzMzM7IHN0cm9rZS13aWR0aDogMTsgfQogICAgICAuYmlub2N1bGFyLWJyaWRnZSB7IGZpbGw6ICMzMzM7IH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIAogIDwhLS0gTGVmdCBsZW5zIC0tPgogIDxjaXJjbGUgY3g9IjEwIiBjeT0iMTYiIHI9IjgiIGNsYXNzPSJiaW5vY3VsYXItbGVucyIvPgogIDxjaXJjbGUgY3g9IjEwIiBjeT0iMTYiIHI9IjYiIGNsYXNzPSJiaW5vY3VsYXItYm9keSIvPgogIAogIDwhLS0gUmlnaHQgbGVucyAtLT4KICA8Y2lyY2xlIGN4PSIyMiIgY3k9IjE2IiByPSI4IiBjbGFzcz0iYmlub2N1bGFyLWxlbnMiLz4KICA8Y2lyY2xlIGN4PSIyMiIgY3k9IjE2IiByPSI2IiBjbGFzcz0iYmlub2N1bGFyLWJvZHkiLz4KICAKICA8IS0tIEJyaWRnZSAtLT4KICA8cmVjdCB4PSIxNCIgeT0iMTQiIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGNsYXNzPSJiaW5vY3VsYXItYnJpZGdlIi8+CiAgCiAgPCEtLSBMZW5zIHJlZmxlY3Rpb25zIC0tPgogIDxjaXJjbGUgY3g9IjgiIGN5PSIxMyIgcj0iMiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC42Ii8+CiAgPGNpcmNsZSBjeD0iMjAiIGN5PSIxMyIgcj0iMiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC42Ii8+Cjwvc3ZnPg==">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    
+    <!-- Social sharing meta tags -->
+    <meta property="og:title" content="Binocular Viewer - Interactive Strategy Image Explorer">
+    <meta property="og:description" content="Explore strategy diagrams through an interactive binocular viewport. Navigate with mouse, keyboard, or touch controls.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="strategy.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Binocular Viewer - Interactive Strategy Image Explorer">
+    <meta name="twitter:description" content="Explore strategy diagrams through an interactive binocular viewport. Navigate with mouse, keyboard, or touch controls.">
+    <meta name="twitter:image" content="strategy.png">
+    
+    <title>Binocular Viewer - Interactive Strategy Image Explorer</title>
+    
+    <!-- Optimized CSS loading for GitHub Pages -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="strategy.png" as="image">
+</head>
+<body>
+    <main class="binocular-container" role="main" aria-label="Interactive binocular viewer">
+        <div class="background-image" aria-hidden="true"></div>
+        <div class="viewport-mask" aria-hidden="true"></div>
+    </main>
+    
+    <!-- Loading indicator for better UX -->
+    <div class="loading-indicator" aria-live="polite">
+        <p>Loading binocular viewer...</p>
+    </div>
+    
+    <!-- Touch instructions for mobile devices -->
+    <div class="touch-instructions initial" id="touchInstructions">
+        Touch and drag to explore • Use arrow keys or WASD
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
